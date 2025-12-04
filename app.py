@@ -40,7 +40,7 @@ def add():
 @app.route("/delete/<int:id>")
 def delete(id):
     conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor
+    c = conn.cursor()
     c.execute("DELETE FROM tasks WHERE id = ?", (id,))
     conn.commit()
     conn.close()

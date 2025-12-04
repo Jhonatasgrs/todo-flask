@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Lista de Tarefas</h1>
+
+<form action="/add" method="POST">
+    <input type="text" name="title" placeholder="Nova tarefa..." required>
+    <button type="submit">Adicionar</button>
+</form>
+
+<ul>
+    {% for task in tasks %}
+    <li>
+        {{ task[1] }}
+        <a class="delete-btn" href="/delete/{{ task[0] }}">✖</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
