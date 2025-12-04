@@ -28,6 +28,6 @@ Permite adicionar, listar e excluir tarefas através de uma interface web.
 
 ## Como rodar o projeto
 
-'''bash
+```bash
 git clone https://github.com/Jhonatasgrs/todo-flask.git
 cd todo-flask
